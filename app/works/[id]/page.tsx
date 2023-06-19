@@ -50,16 +50,16 @@ console.log(project.github_url,project.live_url)
        <p className='mb-6'>{project.description}</p>
 
        
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-col md:flex-row w-full">
 
     { project.live_url &&  <Link target='_blank' 
         href={project.live_url}
-        className='p-4 flex gap-3 items-center w-fit font-bold white_text mt-5 rounded-full bg-[#8092ea] '
+        className='p-4 flex gap-3 items-center md:w-fit  font-bold white_text mt-5 rounded-full bg-[#8092ea] sm:w-full justify-center '
         >Live site <BsBoxArrowUpRight/></Link>}
 
        <Link target='_blank' 
         href={project.github_url}
-        className='p-4 flex gap-3 items-center w-fit font-bold white_text mt-5 rounded-full bg-[#8092ea] '
+        className='p-4 flex gap-3 items-center md:w-fit   font-bold white_text mt-5 rounded-full bg-[#8092ea] sm:w-full justify-center'
         >Github Repo <BsBoxArrowUpRight/></Link>
         </div>
         {/* demo credentials */}

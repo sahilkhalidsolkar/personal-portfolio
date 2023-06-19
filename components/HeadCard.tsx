@@ -28,7 +28,7 @@ function HeadCard({
     setLike(prev=>!prev)
   }
 const typewriterList=[
-  ` Hi, I'm ${name.split(" ")[0]}`,'💖 to <Code/>',
+  ` Hi, I'm ${name.split(" ")[0]}`,'❤ to <Code/>',
 ]
   return (
     <CardWrapper

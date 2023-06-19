@@ -15,9 +15,6 @@ function CardWrapper({
   initial,
   animate,
   transition
-  // initial={{ opacity:0, scale: 0.5 }}
-  // animate={{opacity:1,  scale: 1 }}
-  // transition={{ duration: 0.5 }}
 }: Props) {
   return (
     <motion.div 
@@ -27,7 +24,7 @@ function CardWrapper({
     // initial={initial ||{ opacity:0, scale: 0.5 }}
     // animate={animate ||{opacity:1,  scale: 1 }}
     // transition={transition||{ duration: 0.5 }}
-    className={`background_secondary rounded-[50px]  p-10 ${className}`}>
+    className={`background_secondary rounded-[50px]  md:p-10 p-6  ${className}`}>
         {children}
     </motion.div>
   )

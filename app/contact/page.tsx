@@ -18,7 +18,7 @@ type Props = {}
   })
   useEffect(() => {
     async function getData() {
-      const data = await fetch(`${process.env.NEXTJS_BASE_URL}api/author`,
+      const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/author`,
   { next: { revalidate: 10 } }
   );
   const [author]:Author[]=await  data.json()

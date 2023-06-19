@@ -7,6 +7,7 @@ type Props = {}
 
 async function page({}: Props) {
   const projects:Projects[]= await getProjects()
+  
   return (
     <div className='flex flex-col  w-full gap-9'>
         <WorkList 

@@ -12,7 +12,7 @@ type Props = {}
 async function page({}: Props) {
   const [resume]:Resume[]=await getResume()
   const experiences:Experience[]= await getExperience()
-
+ 
   return (
     <div className='flex flex-col   w-full gap-9'>
         <ResumeCardWrapper title='About me'>

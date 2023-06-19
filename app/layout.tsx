@@ -20,6 +20,7 @@ export default async function RootLayout({
 }) {
   
   const [author]:Author[]= await getAuthor()
+  
   return (
     <html lang="en">
       <body className='background_primary ' >
@@ -28,6 +29,7 @@ export default async function RootLayout({
         <div className='flex  flex-col md:flex-row gap-10 w-full  '>
 
           {/* sidebar */}
+         
          <Sidebar
          profile_src={urlFor(author.profileImage).url() }
          name={author.name}

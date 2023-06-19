@@ -17,9 +17,10 @@ function Carousel({experiences}: Props) {
         } } 
         aria-label="React Splide Example">
           {experiences.map(experience=>(
-      <SplideSlide>
+      <SplideSlide
+      key={experience._id}
+      >
         <ExpCard 
-        key={experience._id}
         company_name={experience.company_name}
         company_logo={urlFor( experience.company_logo).url()}
         role={experience.role}

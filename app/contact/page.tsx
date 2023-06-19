@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 type Props = {}
 
  function page({}: Props) {
- 
+  
 
   const [emailData, setEmailData] = useState<Email>({
     mailTo:'',

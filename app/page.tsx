@@ -6,12 +6,11 @@ import { Author, Experience, Projects } from '@typings';
 import { getAuthor, getExperience, getProjects, urlFor } from '@utility/utility';
 
 
-
-
 export default async function Home() {
     const [author]:Author[]= await getAuthor()
     const experiences:Experience[]= await getExperience()
     const projects:Projects[]= await getProjects()
+   
   return (
     <div className='flex flex-col w-full gap-9'>
       <HeadCard

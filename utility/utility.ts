@@ -16,6 +16,8 @@ export function urlFor(source:string) {
 }
 
 // api version
+// export const dynamic = "force-dynamic";
+// export const fetchCache = "force-no-store";
 // fetch author
  export async function getAuthor(){
   const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/author`,
@@ -44,7 +46,7 @@ export function urlFor(source:string) {
   );
   return data.json()
 }
-// fetch resume
+// fetch resume 
  export async function getResume(){
   const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/resume`,
   { next: { revalidate: 60 } }

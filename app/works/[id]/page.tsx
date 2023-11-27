@@ -12,6 +12,8 @@ import { Projects } from '@typings'
 type Props = {
   params: { id: string }
 }
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 async function page({params}: Props) {
   const {id}=params

@@ -7,7 +7,7 @@ import { Author } from '@typings'
 import { getAuthor, urlFor } from '@utility/utility'
 
 export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
+// export const fetchCache = "force-no-store";
 
 export const metadata = {
   title: "Sahil's Portfolio",

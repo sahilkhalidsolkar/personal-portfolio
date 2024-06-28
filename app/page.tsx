@@ -6,7 +6,7 @@ import { Author, Experience, Projects } from '@typings';
 import { getAuthor, getExperience, getProjects, urlFor } from '@utility/utility';
 
 export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
+// export const fetchCache = "force-no-store";
 
 export default async function Home() {
     const [author]:Author[]= await getAuthor()

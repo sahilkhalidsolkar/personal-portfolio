@@ -5,7 +5,7 @@ import React from 'react'
 
 type Props = {}
 export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
+// export const fetchCache = "force-no-store";
 async function page({}: Props) {
   const projects:Projects[]= await getProjects()
   

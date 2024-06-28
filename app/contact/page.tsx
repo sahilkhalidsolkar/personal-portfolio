@@ -5,8 +5,7 @@ import { getAuthor } from '@utility/utility'
 import React, { useEffect, useState } from 'react'
 
 type Props = {}
-export const dynamic = "error";
-// export const fetchCache = "force-no-store";
+export const dynamic = "force-dynamic";
  function page({}: Props) {
   
 

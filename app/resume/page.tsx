@@ -8,8 +8,7 @@ import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
-// export const dynamic = "force-dynamic";
-// export const fetchCache = "force-no-store";
+export const dynamic = "force-dynamic";
 async function page({}: Props) {
   const [resume]:Resume[]=await getResume()
   const experiences:Experience[]= await getExperience()
@@ -18,7 +17,6 @@ async function page({}: Props) {
     <div className='flex flex-col   w-full gap-9'>
         <ResumeCardWrapper title='About me'>
         <p className='grey_text mt-5 mb-7 font-[400] md:text-lg text-[17px]'>
-        {/* Hi, I am Eldyn, a human, living in this beautiful Earth. Have interest in minimalism, simplicity, and card design. Currently work as Full-stack Developer. */}
         {resume.about_me}
         </p>
         <Link target='_blank' 
@@ -37,32 +35,6 @@ async function page({}: Props) {
             imageSrc={urlFor(technology.icon_image).url() }
             />)}
             
-            {/* <TechIcons 
-            name='Framer' 
-            type='Design' 
-            imageSrc='https://framerusercontent.com/images/2PYckrOSh4UPnsYGTtqw3BWyLA.png'
-            />
-            <TechIcons 
-            name='Framer' 
-            type='Design' 
-            imageSrc='https://framerusercontent.com/images/2PYckrOSh4UPnsYGTtqw3BWyLA.png'
-            />
-            <TechIcons 
-            name='Framer' 
-            type='Design' 
-            imageSrc='https://framerusercontent.com/images/2PYckrOSh4UPnsYGTtqw3BWyLA.png'
-            />
-            <TechIcons 
-            name='Framer' 
-            type='Design' 
-            imageSrc='https://framerusercontent.com/images/2PYckrOSh4UPnsYGTtqw3BWyLA.png'
-            />
-            <TechIcons 
-            name='Framer' 
-            type='Design' 
-            imageSrc='https://framerusercontent.com/images/2PYckrOSh4UPnsYGTtqw3BWyLA.png'
-            /> */}
-            
         </div>
         </ResumeCardWrapper>
         <ResumeCardWrapper title='experience'>
@@ -72,12 +44,7 @@ async function page({}: Props) {
             duration={experience.duration}
             about={experience.description}
             />)}
-            {/* <ResumeContentCard
-            title='Spotify'
-            subtitle='Front end Developer'
-            duration='2019 - 2021'
-            about='Implemented user interfaces, created APIs, wrote server-side code, collaborated with the design and development team, and ensured high-quality and scalable software solutions. This is only an example.'
-            /> */}
+           
         </ResumeCardWrapper>
         <ResumeCardWrapper title='education'>
             <ResumeContentCard

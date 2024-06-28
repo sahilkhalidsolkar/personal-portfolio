@@ -12,13 +12,21 @@ import { Projects } from '@typings'
 type Props = {
   params: { id: string }
 }
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 // export const fetchCache = "force-no-store";
+// export const dynamicParams =true;
+
+export async function generateStaticParams() {
+  const posts = await fetch(`${process.env.NEXTJS_BASE_URL}/api/projects`).then((res) => res.json())
+ 
+  return posts.map((post:Projects) => ({
+    id: post._id,
+  }))
+}
 
 async function page({params}: Props) {
   const {id}=params
   const [project]:Projects[]= await getSingleProjects(id)
-console.log(project.github_url,project.live_url)
    
   return (
     <div className='flex flex-col  w-full gap-9'>

@@ -20,35 +20,35 @@ export function urlFor(source:string) {
 // fetch author
  export async function getAuthor(){
   const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/author`,
-  { next: { revalidate: 60 } }
+  // { next: { revalidate: 60 } }
   );
   return data.json()
 }
 // fetch experience
  export async function getExperience(){
   const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/experience`,
-  { next: { revalidate: 60 } }
+  // { next: { revalidate: 60 } }
   );
   return data.json()
 }
 // fetch projects
  export async function getProjects(){
   const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/projects`,
-  { next: { revalidate: 60 } }
+  // { next: { revalidate: 60 } }
   );
   return data.json()
 }
 // fetch single projects
  export async function getSingleProjects(id:string){
   const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/projects/${id}`,
-  { next: { revalidate: 60 } }
+  // { next: { revalidate: 60 } }
   );
   return data.json()
 }
 // fetch resume 
  export async function getResume(){
   const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/resume`,
-  { next: { revalidate: 60 } }
+  // { next: { revalidate: 60 } }
   );
   return data.json()
 }

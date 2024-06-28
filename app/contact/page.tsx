@@ -5,7 +5,7 @@ import { getAuthor } from '@utility/utility'
 import React, { useEffect, useState } from 'react'
 
 type Props = {}
-export const dynamic = "force-dynamic";
+export const dynamic = "error";
 // export const fetchCache = "force-no-store";
  function page({}: Props) {
   
@@ -19,9 +19,7 @@ export const dynamic = "force-dynamic";
   })
   useEffect(() => {
     async function getData() {
-      const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/author`,
-  { next: { revalidate: 10 } }
-  );
+      const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/author`);
   const [author]:Author[]=await  data.json()
       setEmailData({...emailData,mailTo:author.mail_url})
     }

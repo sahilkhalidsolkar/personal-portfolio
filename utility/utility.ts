@@ -15,9 +15,8 @@ export function urlFor(source:string) {
   return builder.image(source)
 }
 
-// api version
-// export const dynamic = "force-dynamic";
-// export const fetchCache = "force-no-store";
+
+
 // fetch author
  export async function getAuthor(){
   const data = await fetch(`${process.env.NEXTJS_BASE_URL}/api/author`,

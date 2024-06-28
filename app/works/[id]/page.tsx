@@ -12,6 +12,7 @@ import { Projects } from '@typings'
 type Props = {
   params: { id: string }
 }
+export const fetchCache = 'auto'
 
 export async function generateStaticParams() {
   const posts = await fetch(`${process.env.NEXTJS_BASE_URL}/api/projects`).then((res) => res.json())

@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react'
 
 type Props = {}
 export const dynamic = "force-dynamic";
+export const fetchCache = 'force-no-store'
+
  function page({}: Props) {
   
 

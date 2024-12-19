@@ -1,15 +1,11 @@
-import CardWrapper from '@components/CardWrapper'
 import ResumeCardWrapper from '@components/ResumeCardWrapper'
 import ResumeContentCard from '@components/ResumeContentCard'
 import TechIcons from '@components/TechIcons'
 import { Experience, Resume } from '@typings'
 import { getExperience, getResume, urlFor } from '@utility/utility'
 import Link from 'next/link'
-import React from 'react'
 
 type Props = {}
-export const dynamic = "force-dynamic";
-export const fetchCache = 'force-no-store'
 
 async function page({}: Props) {
   const [resume]:Resume[]=await getResume()
@@ -41,6 +37,7 @@ async function page({}: Props) {
         </ResumeCardWrapper>
         <ResumeCardWrapper title='experience'>
           {experiences.map(experience=> <ResumeContentCard
+            key={experience._id}
             title={experience.company_name}
             subtitle={experience.role}
             duration={experience.duration}

@@ -2,27 +2,24 @@
 import CardWrapper from '@components/CardWrapper'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import Video from '@components/Video'
-import { getSingleProjects, urlFor } from '@utility/utility'
+import { getProjects, getSingleProjects, urlFor } from '@utility/utility'
 import { Projects } from '@typings'
 
 type Props = {
   params: { id: string }
 }
-export const fetchCache = 'auto'
 
 export async function generateStaticParams() {
-  const posts = await fetch(`${process.env.NEXTJS_BASE_URL}/api/projects`).then((res) => res.json())
- 
+  const posts = await getProjects()
   return posts.map((post:Projects) => ({
     id: post._id,
   }))
 }
 
-async function page({params}: Props) {
+async function Page({params}: Props) {
   const {id}=params
   const [project]:Projects[]= await getSingleProjects(id)
    
@@ -86,4 +83,4 @@ async function page({params}: Props) {
   )
 }
 
-export default page
+export default Page

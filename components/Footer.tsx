@@ -1,9 +1,7 @@
 "use client"
-import React from 'react'
 import {AiOutlineWhatsApp,AiOutlineMail,AiOutlineLinkedin,AiOutlineInstagram} from 'react-icons/ai'
 import CardWrapper from './CardWrapper'
 import Link from 'next/link'
-import {motion} from 'framer-motion'
 
 type Props = {
   linkedIn_url:string,
@@ -20,16 +18,16 @@ function Footer({linkedIn_url,insta_url,whatsapp_url,mail_url}: Props) {
     transition={{ duration: 0.2 }}
      className='grey_text mt-9'>
         <div className='md:text-5xl text-4xl flex gap-4 justify-center mt-6'>
-           <Link href={linkedIn_url}> 
+           <Link target="_blank" href={linkedIn_url}> 
            <AiOutlineLinkedin/>
            </Link>
-           <Link href={insta_url}>
-            <AiOutlineInstagram/>
-           </Link>
-           <Link href={whatsapp_url}>
+           <Link target="_blank" href={whatsapp_url}>
             <AiOutlineWhatsApp/>
            </Link>
-           <Link href={mail_url}>
+           <Link target="_blank" href={insta_url}>
+            <AiOutlineInstagram/>
+           </Link>
+           <Link  href={mail_url}>
             <AiOutlineMail/>
            </Link>
         </div>

@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import ExpCard from './ExpCard';
@@ -15,7 +14,7 @@ function Carousel({experiences}: Props) {
         perPage:1,
         gap:'-2rem',
         } } 
-        aria-label="React Splide Example">
+        aria-label="Work Experiences">
           {experiences.map(experience=>(
       <SplideSlide
       key={experience._id}
@@ -29,16 +28,7 @@ function Carousel({experiences}: Props) {
       </SplideSlide>
 
           ))}
-          <SplideSlide>
-        <ExpCard 
-        company_name={'Many more experiences to gain...'}
-        company_logo={'https://source.unsplash.com/rx_GNopVlFs/320x320'}
-        />
-      </SplideSlide>
-      {/* <SplideSlide>
-        <ExpCard company='Amazon'/>
-
-      </SplideSlide> */}
+          
     </Splide>
   )
 }
